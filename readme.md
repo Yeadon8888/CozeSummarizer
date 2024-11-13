@@ -1,16 +1,10 @@
 # Coze文章总结助手
 
-**一个全新的由AI编程的快速编程形式 cursor+coze 进行轻量级快速开发**
-
 一个基于Coze API的Chrome浏览器扩展，可以快速总结网页内容。
-
 
 ![1731467700311](image/readme/1731467700311.png)
 
-![1731469012179](image/readme/1731469012179.png)
-
-![1731469124281](image/readme/1731469124281.png)
-
+![1731468044782](D:/desktop/AI/AI%E5%BC%80%E5%8F%91/work_flow_v5/image/readme/1731468044782.png)
 
 ## 功能特点
 
