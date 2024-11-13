@@ -3,7 +3,7 @@ document.getElementById('backBtn').addEventListener('click', () => {
 });
 
 document.getElementById('submitAuth').addEventListener('click', () => {
-    const authCode = document.getElementById('authCode').value;
+    const authCode = document.getElementById('authCode').value.trim();
     const successMsg = document.getElementById('successMsg');
     const errorMsg = document.getElementById('errorMsg');
     
@@ -11,13 +11,27 @@ document.getElementById('submitAuth').addEventListener('click', () => {
     successMsg.style.display = 'none';
     errorMsg.style.display = 'none';
     
-    // 这里添加实际的授权码验证逻辑
     if (authCode.length > 0) {
-        // 模拟验证过程
-        successMsg.style.display = 'block';
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 1500);
+        // 保存授权码到 Chrome Storage
+        chrome.storage.local.set({ cozeToken: authCode }, async function() {
+            // 显示成功消息
+            successMsg.style.display = 'block';
+            
+            // 向所有标签页广播授权码更新消息
+            chrome.tabs.query({}, function(tabs) {
+                tabs.forEach(tab => {
+                    chrome.tabs.sendMessage(tab.id, {
+                        type: 'tokenUpdated',
+                        token: authCode
+                    });
+                });
+            });
+            
+            // 延迟跳转
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        });
     } else {
         errorMsg.style.display = 'block';
     }
