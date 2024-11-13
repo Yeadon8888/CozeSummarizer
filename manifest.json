@@ -1,20 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "智汇助手",
+  "name": "Coze文章总结助手",
   "version": "1.0",
-  "description": "一站式内容采集与知识管理工具 - 支持网页、小红书、抖音内容总结，无缝对接飞书知识库",
+  "description": "使用Coze API快速总结网页内容",
   "permissions": [
     "activeTab",
     "tabs",
     "storage"
   ],
   "action": {
-    "default_popup": "popup/index.html",
-    "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
-    }
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
   },
   "icons": {
     "48": "icon.png",
