@@ -1,5 +1,7 @@
 # Coze文章总结助手
 
+全程AI辅助编程的 AI快速开发 新范式 cursor + coze workflow 
+
 一个基于Coze API的Chrome浏览器扩展，可以快速总结网页内容。
 
 ![1731467700311](image/readme/1731467700311.png)
