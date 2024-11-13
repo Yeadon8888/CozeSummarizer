@@ -4,7 +4,7 @@
 
 ![1731467700311](image/readme/1731467700311.png)
 
-![1731468044782](D:/desktop/AI/AI%E5%BC%80%E5%8F%91/work_flow_v5/image/readme/1731468044782.png)
+![1731472681932](image/readme/1731472681932.png)
 
 ## 功能特点
 
