@@ -29,7 +29,8 @@
     {
       "matches": ["<all_urls>"],
       "css": ["floatBall.css"],
-      "js": ["floatBall.js"]
+      "js": ["floatBall.js"],
+      "run_at": "document_end"
     }
   ],
   "web_accessible_resources": [{

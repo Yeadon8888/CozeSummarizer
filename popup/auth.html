@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <style>
         body {
-            width: 320px;
+            width: 280px;
             padding: 20px;
             margin: 0;
             font-family: 'Microsoft YaHei', sans-serif;
-            background: #f8f9fa;
+            background: #2d3436;
+            color: white;
         }
         .back-button {
             background: none;
@@ -17,55 +18,63 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            color: #2c3e50;
+            color: #fff;
             font-size: 14px;
             margin-bottom: 20px;
+            transition: color 0.3s ease;
         }
         .back-button i {
             margin-right: 8px;
         }
         .back-button:hover {
-            color: #3498db;
-        }
-        h3 {
-            color: #2c3e50;
-            margin: 0 0 20px 0;
-            font-size: 18px;
+            color: #00cec9;
         }
         .auth-container {
-            background: white;
+            background: #34495e;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h3 {
+            color: white;
+            margin: 0 0 20px 0;
+            font-size: 18px;
         }
         .auth-input {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #e9ecef;
+            background: #2d3436;
+            border: 1px solid #465881;
             border-radius: 6px;
             font-size: 14px;
+            color: white;
             box-sizing: border-box;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .auth-input:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: #00cec9;
+            box-shadow: 0 0 0 2px rgba(0,206,201,0.2);
+        }
+        .auth-input::placeholder {
+            color: rgba(255,255,255,0.5);
         }
         .submit-button {
             width: 100%;
             padding: 12px;
             margin-top: 15px;
-            background-color: #3498db;
+            background: linear-gradient(45deg, #00b894, #00cec9);
             color: white;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             font-size: 14px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .submit-button:hover {
-            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .status-message {
             margin-top: 10px;
@@ -74,10 +83,10 @@
             display: none;
         }
         .status-message.success {
-            color: #27ae60;
+            color: #00b894;
         }
         .status-message.error {
-            color: #e74c3c;
+            color: #ff7675;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
