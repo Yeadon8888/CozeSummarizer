@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 320px;
+            padding: 20px;
+            margin: 0;
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: #f8f9fa;
+        }
+        .back-button {
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: #2c3e50;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .back-button i {
+            margin-right: 8px;
+        }
+        .back-button:hover {
+            color: #3498db;
+        }
+        .subscribe-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h3 {
+            color: #2c3e50;
+            margin: 0 0 20px 0;
+            font-size: 18px;
+        }
+        .price-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .price-card:hover {
+            border-color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .price-card.selected {
+            border-color: #3498db;
+            background-color: #f8f9fa;
+        }
+        .price {
+            font-size: 24px;
+            color: #2c3e50;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .duration {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        .subscribe-button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .subscribe-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button class="back-button" id="backBtn">
+        <i class="fas fa-arrow-left"></i>返回
+    </button>
+    <div class="subscribe-container">
+        <h3>选择订阅方案</h3>
+        <div class="price-card" data-plan="monthly">
+            <div class="duration">月度会员</div>
+            <div class="price">￥29.9</div>
+            <div class="duration">每月</div>
+        </div>
+        <div class="price-card selected" data-plan="yearly">
+            <div class="duration">年度会员</div>
+            <div class="price">￥299</div>
+            <div class="duration">每年</div>
+        </div>
+        <button class="subscribe-button" id="subscribeBtn">
+            <i class="fas fa-shopping-cart"></i> 立即订阅
+        </button>
+    </div>
+    <script src="subscribe.js"></script>
+</body>
+</html> 
