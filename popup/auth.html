@@ -8,7 +8,8 @@
             padding: 20px;
             margin: 0;
             font-family: 'Microsoft YaHei', sans-serif;
-            background: #f8f9fa;
+            background: #1a1a1a;
+            color: white;
         }
         .back-button {
             background: none;
@@ -17,66 +18,78 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            color: #2c3e50;
+            color: rgba(255,255,255,0.8);
             font-size: 14px;
             margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        .back-button:hover {
+            color: #4ecdc4;
         }
         .back-button i {
             margin-right: 8px;
         }
-        .back-button:hover {
-            color: #3498db;
+        .auth-container {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         h3 {
-            color: #2c3e50;
+            color: white;
             margin: 0 0 20px 0;
             font-size: 18px;
-        }
-        .auth-container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .auth-input {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
+            background: #383838;
+            border: 1px solid #444;
+            border-radius: 8px;
             font-size: 14px;
+            color: white;
             box-sizing: border-box;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .auth-input:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: #4ecdc4;
+            box-shadow: 0 0 0 2px rgba(78,205,196,0.2);
         }
         .submit-button {
             width: 100%;
             padding: 12px;
             margin-top: 15px;
-            background-color: #3498db;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 14px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .submit-button:hover {
-            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(78,205,196,0.3);
         }
         .status-message {
             margin-top: 10px;
             font-size: 12px;
             text-align: center;
             display: none;
+            padding: 8px;
+            border-radius: 4px;
         }
         .status-message.success {
-            color: #27ae60;
+            background: rgba(39,174,96,0.2);
+            color: #2ecc71;
         }
         .status-message.error {
+            background: rgba(231,76,60,0.2);
             color: #e74c3c;
         }
     </style>

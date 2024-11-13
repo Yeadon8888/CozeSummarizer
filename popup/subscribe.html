@@ -8,7 +8,8 @@
             padding: 20px;
             margin: 0;
             font-family: 'Microsoft YaHei', sans-serif;
-            background: #f8f9fa;
+            background: #1a1a1a;
+            color: white;
         }
         .back-button {
             background: none;
@@ -17,29 +18,34 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            color: #2c3e50;
+            color: rgba(255,255,255,0.8);
             font-size: 14px;
             margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        .back-button:hover {
+            color: #4ecdc4;
         }
         .back-button i {
             margin-right: 8px;
         }
-        .back-button:hover {
-            color: #3498db;
-        }
         .subscribe-container {
-            background: white;
+            background: #2d2d2d;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         h3 {
-            color: #2c3e50;
+            color: white;
             margin: 0 0 20px 0;
             font-size: 18px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .price-card {
-            border: 1px solid #e9ecef;
+            background: #383838;
+            border: 1px solid #444;
             border-radius: 8px;
             padding: 15px;
             margin: 10px 0;
@@ -48,38 +54,42 @@
             cursor: pointer;
         }
         .price-card:hover {
-            border-color: #3498db;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-color: #4ecdc4;
+            box-shadow: 0 4px 12px rgba(78,205,196,0.2);
         }
         .price-card.selected {
-            border-color: #3498db;
-            background-color: #f8f9fa;
+            border-color: #4ecdc4;
+            background: linear-gradient(45deg, rgba(255,107,107,0.1), rgba(78,205,196,0.1));
         }
         .price {
             font-size: 24px;
-            color: #2c3e50;
+            color: white;
             font-weight: bold;
             margin: 10px 0;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .duration {
             font-size: 14px;
-            color: #7f8c8d;
+            color: rgba(255,255,255,0.7);
         }
         .subscribe-button {
             width: 100%;
             padding: 12px;
             margin-top: 20px;
-            background-color: #3498db;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 14px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .subscribe-button:hover {
-            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(78,205,196,0.3);
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -92,12 +102,12 @@
         <h3>选择订阅方案</h3>
         <div class="price-card" data-plan="monthly">
             <div class="duration">月度会员</div>
-            <div class="price">￥29.9</div>
+            <div class="price">￥9.9</div>
             <div class="duration">每月</div>
         </div>
         <div class="price-card selected" data-plan="yearly">
             <div class="duration">年度会员</div>
-            <div class="price">￥299</div>
+            <div class="price">￥89.9</div>
             <div class="duration">每年</div>
         </div>
         <button class="subscribe-button" id="subscribeBtn">
