@@ -51,6 +51,7 @@
   padding: 15px;
   overflow-y: auto;
   display: none;
+  color: #333;
 }
 
 .coze-summary-panel.active {
@@ -60,6 +61,7 @@
 .coze-loading {
   text-align: center;
   padding: 20px;
+  color: #333;
 }
 
 .coze-close-btn {
@@ -173,4 +175,38 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-} 
+}
+
+.coze-content {
+  color: #333;
+}
+
+.coze-content a {
+  color: #4ecdc4;
+}
+
+.coze-content .error-message {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.coze-summary-panel * {
+  color: #333;
+}
+
+.rich_media_content .coze-summary-panel,
+.rich_media_content .coze-content,
+.mp.weixin.qq.com .coze-summary-panel,
+.mp.weixin.qq.com .coze-content {
+  background: #2d2d2d;
+  color: #ffffff;
+}
+
+.rich_media_content .coze-loading,
+.mp.weixin.qq.com .coze-loading {
+  color: #ffffff;
+}
+ 
